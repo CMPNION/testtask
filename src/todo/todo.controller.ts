@@ -8,9 +8,9 @@ import { Todo } from '../database/models/todo.model';
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
-  @Get('/get/:id')
-  async find(@Param('id') id: number) {
-    return this.todoService.getById(id);
+  @Get('/get/:uuid')
+  async find(@Param('uuid') uuid: string) {
+    return this.todoService.getById(uuid);
   }
 
   @Get()
@@ -24,14 +24,14 @@ export class TodoController {
     return this.todoService.createNew(body);
   }
 
-  @Delete('/delete/:id')
-  async deleteTask(@Param('id') id: number): Promise<void> {
-    return this.todoService.delete(id);
+  @Delete('/delete/:uuid')
+  async deleteTask(@Param('uuid') uuid: string): Promise<void> {
+    return this.todoService.delete(uuid);
   }
 
-  @Put('/update/:id')
+  @Put('/update/:uuid')
   @UsePipes(new ValidationPipe({ whitelist: true }))
-  async updateTask(@Param('id') id: number, @Body() body: UpdateTaskDto): Promise<Todo> {
-    return this.todoService.updateTask(id, body);
+  async updateTask(@Param('uuid') uuid: string, @Body() body: UpdateTaskDto): Promise<Todo> {
+    return this.todoService.updateTask(uuid, body);
   }
 }
