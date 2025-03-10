@@ -1,4 +1,47 @@
-<<<<<<< HEAD
+Get todo by ID
+<br/>
+Route: GET /todo/get/:uuid
+<br/>
+Purpose: Retrieve a specific Todo item by its UUID.
+<br/>
+<br/>
+
+Get all Todos:
+<br/>
+Route: GET /todo
+<br/>
+Purpose: Retrieve all Todo items.
+<br/>
+<br/>
+
+Create a new Todo:
+<br/>
+Route: POST /todo/new
+<br/>
+Purpose: Create a new Todo item.
+<br/>
+<br/>
+
+Delete a Todo by UUID:
+<br/>
+Route: DELETE /todo/delete/:uuid
+<br/>
+Purpose: Delete a specific Todo item by its UUID.
+<br/>
+<br/>
+
+Update a Todo by UUID:
+<br/>
+Route: PUT /todo/update/:uuid
+<br/>
+Purpose: Update a specific Todo item by its UUID.
+<br/>
+<br/>
+
+
+
+
+
 # testtask
 =======
 <p align="center">
