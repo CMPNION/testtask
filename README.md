@@ -38,7 +38,13 @@ Purpose: Update a specific Todo item by its UUID.
 <br/>
 <br/>
 
-
+.env variables:
+PORT=server_port
+DB_HOST=database_host
+DB_PORT=database_port
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+DB_NAME=database_name
 
 
 
